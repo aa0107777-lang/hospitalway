@@ -1,0 +1,96 @@
+
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="병원 진료과와 편의시설 위치 안내">
+  <title>우리병원 길찾기</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./">
+      <span class="brand-mark">✚</span> 우리병원 길찾기
+    </a>
+    <span class="top-note">병원 이용 안내</span>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">HOSPITAL WAYFINDING</p>
+      <h1>원하는 곳을<br>쉽고 빠르게 찾아보세요.</h1>
+      <p class="hero-copy">
+        진료과, 검사실, 병동 및 편의시설의 위치를 검색할 수 있어요.
+      </p>
+
+      <label class="search">
+        <span aria-hidden="true">⌕</span>
+        <input
+          id="searchInput"
+          type="search"
+          placeholder="예: 내과, MRI실, 원무과, 1001호"
+          autocomplete="off"
+        >
+        <button id="clearSearch" type="button" aria-label="검색어 지우기">
+          지우기
+        </button>
+      </label>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">FLOOR GUIDE</p>
+          <h2>층별 안내</h2>
+        </div>
+        <p class="muted">층을 선택해 시설을 확인하세요.</p>
+      </div>
+
+      <div class="floor-tabs" id="floorTabs" aria-label="층 선택">
+        <button class="floor-tab active" data-floor="all">전체</button>
+        <button class="floor-tab" data-floor="3">3층</button>
+        <button class="floor-tab" data-floor="4">4층</button>
+        <button class="floor-tab" data-floor="5">5층</button>
+        <button class="floor-tab" data-floor="6">6층</button>
+        <button class="floor-tab" data-floor="7">7층</button>
+        <button class="floor-tab" data-floor="8">8층</button>
+        <button class="floor-tab" data-floor="9">9층</button>
+        <button class="floor-tab" data-floor="10">10층</button>
+        <button class="floor-tab" data-floor="11">11층</button>
+        <button class="floor-tab" data-floor="12">12층</button>
+        <button class="floor-tab" data-floor="13">13층</button>
+        <button class="floor-tab" data-floor="14">14층</button>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">PLACE SEARCH</p>
+          <h2 id="resultHeading">시설 안내</h2>
+        </div>
+        <span class="result-count" id="resultCount"></span>
+      </div>
+
+      <div class="place-grid" id="placeList" aria-live="polite"></div>
+
+      <p class="empty hidden" id="emptyMessage">
+        검색 결과가 없습니다. 다른 검색어를 입력해 주세요.
+      </p>
+    </section>
+
+    <aside class="notice">
+      <strong>이용 안내</strong>
+      <p>
+        본 페이지는 병원 내 진료과 및 시설 위치를 안내하기 위한 웹페이지입니다.
+        실제 방문 전 정확한 위치와 운영 여부를 병원에 확인해 주세요.
+      </p>
+    </aside>
+  </main>
+
+  <footer>© 우리병원 · 병원 이용 안내</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
